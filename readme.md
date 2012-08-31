@@ -1,0 +1,1 @@
+Template to kickstart a new node.js web app with Express, Jade, jQuery, Bootstrap wired up to a lightweight MVC module layout
