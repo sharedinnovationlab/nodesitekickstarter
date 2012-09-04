@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h3 Username or password incorrect
+  form.form-horizontal(action='/login', method='post')
+    div.control-group
+      label.control-label(for="username") Username
+      div.controls
+        input(type='text', name='username', placeholder='Username')
+    div.control-group
+      label.control-label(for='password') Password
+      div.controls
+        input(type='password', name='password', placeholder="Password")
+    div.control-group
+      div.controls
+        button.btn(type='submit') Sign-In

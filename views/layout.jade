@@ -48,8 +48,14 @@ html
                     a(href='#') Separated link
                   li
                     a(href='#') One more separated link
+
+          if (user != null)
+            div.nav.pull-right
+              span Welcome back #{user.username} - 
+              a(href='/logout') Logout
+          else
             form.navbar-form.pull-right(method='post', action='/login')
-              input.span2(type='text', placeholder='Email', name='email')
+              input.span2(type='text', placeholder='Username', name='username')
               input.span2(type='password', placeholder='Password', name='password')
               button.btn(type='submit') Sign in
        
