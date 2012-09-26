@@ -1,8 +1,9 @@
+passport = require('passport')
 
 module.exports = (app, dependencies) ->
 
   # Post the login credentials
-  app.post "/login", dependencies.passport.authenticate 'local',
+  app.post "/login", passport.authenticate 'local',
     successRedirect: '/'
     failureRedirect: '/loginfail'
 
@@ -11,4 +12,5 @@ module.exports = (app, dependencies) ->
     res.redirect('/')
 
   app.get "/loginfail", (req, res) ->
-    res.render 'loginfail'
+    res.render 'loginfail',
+      title: 'Login Failed'

@@ -8,3 +8,8 @@ module.exports = (app, context) ->
   app.get "/", (req, res) ->
     res.render "index", 
       title: "Node Kickstarter"
+
+  # GET the tests page
+  app.get "/tests", (req, res) ->
+    res.render "tests",
+      title: "Tests"

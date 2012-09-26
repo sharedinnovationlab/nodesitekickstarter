@@ -1,7 +1,9 @@
+passport = require('passport')
+
 # Module which encapsulates security related aspects for the app.
 
 module.exports = (app, dependencies) ->
-  passport = dependencies.passport
+  # passport = dependencies.passport
 
   # Configure Passport to use a local username/password strategy
   localStrategy = require('passport-local')

@@ -11,7 +11,6 @@ localStrategy = require('passport-local').Strategy
 # Create a dependency object to pass into various modules
 dependencies = 
   repository : require('./repository')(app)
-  passport : passport
 
 security = require("./security")(app, dependencies)
 
